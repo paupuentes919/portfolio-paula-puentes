@@ -1,27 +1,26 @@
-#background-home {
-	min-height: 100vh;
-    background-image: url('../../../public/programming.jpg');
+body {
+	background-image: url('../../../public/programming.jpg');
     background-position: center;
     background-size: cover;
-    color: white;
-    position: relative;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    display: block;
+    left: 0;
+    top: 0;
+    width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0px, rgba(0, 0, 0, 0.9) 100%) repeat 0 0;
+	background-repeat: no-repeat;
+	background-position: center;
+    z-index: -1;
 }
 
 #background-home-loading {
     height: 100vh;
     background-color: black;
-}
-
-#background-home::after {
-    content: "";
-    position: absolute;
-    display: block;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0px, rgba(0, 0, 0, 0.9) 100%) repeat 0 0;
-    z-index: 1;
 }
 
 .content-container {
@@ -228,6 +227,47 @@
   .display {
 	display: flex;
   }
+
+  .home-img-about-me {
+	height: 15rem;
+	background-size: contain;
+	background-image: url('../../assets/img/bluelines.png');
+	box-shadow: inset 0px 0px 10px 10px #000;
+	padding-top: 1rem;
+	padding-left: 2rem;
+	padding-right: 1rem;
+	/* border-right: 3px solid #c57996;
+	border-bottom: 3px solid #c57996;
+	border-right-style: calc(100% - 2rem); */
+  }
+
+  .text-about-me {
+	font-weight: 400;
+	font-size: 18px;
+	max-width: 60%;
+	align-self: center;
+	margin-top: 2rem;
+  }
+
+  .section-home-about-me {
+	width: 70%; 
+	font-size: 20px;
+	color: pink;
+	font-weight: 600;
+	text-align: center; 
+	border-bottom: 3px solid rgba(217, 160, 211, 0.5);
+	line-height: 0.1em;
+	margin: 50px 0 20px; 
+	position: absolute;
+    left: 15%;
+	right: 15%;
+ } 
+ 
+ .section-home-about-me span { 
+	background-color: black;
+	box-shadow: 0px 0px 10px 10px #000;
+	padding:0 10px; 
+ }
 
   @media(max-width: 950px) {
 	.display {

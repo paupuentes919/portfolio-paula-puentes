@@ -177,6 +177,18 @@ const Home = () => {
                 <img src={homeImg} className="home-img" alt="profile" />
               </div>
             </div>
+            <div className="section-home-about-me mt-16">
+              <span>About me</span>
+            </div>
+            <div className="display justify-center mt-16 mb-16">
+              <div className="text-about-me animation-text">
+                As an industrious and proactive industrial engineer, I am
+                dedicated to continual skill refinement and professional
+                advancement. Known for my reliability, efficiency, and ability
+                to thrive both independently and within teams, I prioritize open
+                communication and embrace ongoing learning opportunities
+              </div>
+            </div>
           </div>
         </div>
       )}
