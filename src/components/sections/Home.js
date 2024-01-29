@@ -1,4 +1,5 @@
 import React from "react";
+import axios from "axios";
 import homeImg from "../../assets/img/paulapuentesfotosinfondo.png";
 import portfolio from "../../assets/pdf/CVPaulaPuentes.pdf";
 import { useState, useEffect } from "react";
@@ -14,10 +15,29 @@ import "../../css/components/Home.css";
 
 const Home = () => {
   const [loading, setLoading] = useState(true);
+  const [gifData, setGifData] = useState(null);
+  const searchTerm = "cats";
+  const apiKey = "uTX0XqWeoUNj4xLWphRlA6xWQwusPNlf";
+  const limit = 10;
+  const randomIndex = Math.floor(Math.random() * limit);
+  const url = `https://api.giphy.com/v1/gifs/search?q=${searchTerm}&api_key=${apiKey}&limit=${limit}`;
+
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
     }, 1700);
+  }, []);
+
+  useEffect(() => {
+    const fetchGifData = async () => {
+      try {
+        const response = await axios.get(url);
+        setGifData(response.data);
+      } catch (error) {
+        console.error("Error fetching Gif data:", error);
+      }
+    };
+    fetchGifData();
   }, []);
 
   return (
@@ -191,10 +211,22 @@ const Home = () => {
               </div>
             </div>
             <div>
-              <div className="flex justify-center contact-me-home animation-text">Let's contact me!</div>
-              <a  className="flex justify-center animation-img" href="mailto:paupuentes919@gmail.com">
-                <FontAwesomeIcon icon={faPaperPlane} className="icon-plane"/>
+              <div className="flex justify-center contact-me-home animation-text">
+                Let's contact me!
+              </div>
+              <a
+                className="flex justify-center animation-img"
+                href="mailto:paupuentes919@gmail.com"
+              >
+                <FontAwesomeIcon icon={faPaperPlane} className="icon-plane" />
               </a>
+            </div>
+            <div>
+              <div className="flex justify-center fun-fact-text animation-text">
+                Fun Fact...I love cats!
+              </div>
+              <p className="flex justify-center gif-text animation-img">Enjoy this API Gif about felines</p>
+              <div className="flex justify-center mb-10 animation-text"><img src={gifData.data[randomIndex].images.original.url} width="200px" height="200px"/></div>
             </div>
           </div>
         </div>
