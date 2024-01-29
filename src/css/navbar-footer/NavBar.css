@@ -1,0 +1,35 @@
+.nav-bar-colors {
+    background-color: #111221;
+}
+
+.text-color-navbar-current {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 0.5rem;
+    color: #caaf6f;
+    
+}
+
+.text-color-navbar{
+    color: white;
+}
+
+.text-color-navbar:hover{
+    color: #caaf6f;
+}
+
+.text-color-navbar::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 2px;
+    width: 0;
+    height: 2px;
+    background: #caaf6f;
+    transition: all 0.45s;
+}
+
+.text-color-navbar:hover::after, .text-color-navbar:focus::after{
+    width: calc(100% - 2rem);
+    left: 1rem;
+}
