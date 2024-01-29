@@ -9,6 +9,7 @@ import {
   faLinkedin,
   faSquareGithub,
 } from "@fortawesome/free-brands-svg-icons";
+import { faPaperPlane } from "@fortawesome/free-regular-svg-icons";
 import "../../css/components/Home.css";
 
 const Home = () => {
@@ -177,7 +178,7 @@ const Home = () => {
                 <img src={homeImg} className="home-img" alt="profile" />
               </div>
             </div>
-            <div className="section-home-about-me mt-16">
+            <div className="section-home-about-me mt-16 animation-img">
               <span>About me</span>
             </div>
             <div className="display justify-center mt-16 mb-16">
@@ -188,6 +189,12 @@ const Home = () => {
                 to thrive both independently and within teams, I prioritize open
                 communication and embrace ongoing learning opportunities
               </div>
+            </div>
+            <div>
+              <div className="flex justify-center contact-me-home">Let's contact me!</div>
+              <a  className="flex justify-center"href="mailto:paupuentes919@gmail.com">
+                <FontAwesomeIcon icon={faPaperPlane} className="icon-plane"/>
+              </a>
             </div>
           </div>
         </div>
