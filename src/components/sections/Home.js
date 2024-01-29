@@ -191,8 +191,8 @@ const Home = () => {
               </div>
             </div>
             <div>
-              <div className="flex justify-center contact-me-home">Let's contact me!</div>
-              <a  className="flex justify-center"href="mailto:paupuentes919@gmail.com">
+              <div className="flex justify-center contact-me-home animation-text">Let's contact me!</div>
+              <a  className="flex justify-center animation-img" href="mailto:paupuentes919@gmail.com">
                 <FontAwesomeIcon icon={faPaperPlane} className="icon-plane"/>
               </a>
             </div>
