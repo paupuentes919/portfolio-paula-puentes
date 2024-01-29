@@ -1,5 +1,5 @@
 #background-home {
-    height: 100vh;
+	min-height: 100vh;
     background-image: url('../../../public/programming.jpg');
     background-position: center;
     background-size: cover;
@@ -39,6 +39,8 @@
 .text-center {
     align-self: center;
     margin-right: 2rem;
+	margin-top: 0;
+	padding: unset;
 }
 
 .text-last-name {
@@ -177,14 +179,75 @@
 }
 
 .animation-text {
-    animation: textleftright 1.5s linear;
+    animation: textleftoright 1.5s linear;
+}
+.animation-img {
+    animation: imgrighttoleft 1.5s linear;
 }
 
-@keyframes textleftright {
+@keyframes textleftoright {
   0% {
     transform: translateX(-50%);
   }
   25% {
     transform: translateX(5%);
   }
+}
+
+@keyframes imgrighttoleft {
+	0% {
+	  transform: translateX(50%);
+	}
+	25% {
+	  transform: translateX(5%);
+	}
+  }
+
+  .icons-color {
+	color: white;
+  }
+
+  .btn-portfolio {
+	font-size: 15px;
+	font-weight: 500;
+	background-color: #caaf6f;
+	color: #111221;
+	padding: 0.5rem;
+	border-radius: 4px;
+  }
+
+  .btn-portfolio:hover {
+	font-size: 15px;
+	font-weight: 500;
+	background-color: #cdc4af;
+	color: #4f4f51;
+	padding: 0.5rem;
+	border-radius: 4px;
+  }
+
+  .display {
+	display: flex;
+  }
+
+  @media(max-width: 950px) {
+	.display {
+		flex-direction: column-reverse;
+		justify-content: center;
+	}
+	.animation-img {
+		justify-content: center;
+		display: flex;
+	}
+	.text-center {
+		margin-top: 2rem;
+		margin-right: 0;
+		padding: 1rem;
+	}
+  }
+
+@media(max-width: 500px) {
+	.home-img {
+		width: 15rem;
+		height: 15rem;
+	}
 }
