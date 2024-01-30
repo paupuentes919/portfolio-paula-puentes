@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
+.img-about-me {
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+    height: 400px;
+}
+
+.img-me {
+    height: 300px;
+}
+
+.about-me-container {
+    display: flex;
+    position: absolute;
+    top: 13%;
+    right: 19%;
+}
+
+.about-me-text {
+    font-family: 'Bangers';
+    font-size: 150px;
+    display: flex;
+    justify-content: flex-end;
+    color: #ff0099;
+    -webkit-text-stroke: 3px black;
+}
+
+.full-stack-text {
+    font-family: 'Bangers';
+    font-size: 40px;
+    position: absolute;
+    top: 53%;
+    right: 22.5%;
+    max-width: 40%;
+    padding-left: 1rem;
+    border: 2px solid black;
+    background-color: white;
+}
+
+.description-about-me {
+    font-family: 'Bangers';
+    font-size: 18px;
+    max-width: 25%;
+    position: absolute;
+    padding-left: 1rem;
+    right: 37.5%;
+    bottom: 3%;
+    border: 2px solid black;
+    background-color: white;
+}
+
+.img-facultad {
+    position: absolute;
+    bottom: 3%;
+    height: 166px;
+    padding: 0.5rem;
+    border: 2px solid black;
+    background-color: white;
+    right: 22.5%;
+    width: 200px;
+}

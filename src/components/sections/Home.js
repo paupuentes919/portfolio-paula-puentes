@@ -145,7 +145,7 @@ const Home = () => {
           <div className="content-container mt-16">
             <div className="display justify-center">
               <div className="text-center animation-text">
-                <div>Hi there!</div>
+              <div>Hi there!</div>
                 <div>
                   Im Paula <span className="text-last-name">Puentes</span>
                 </div>
@@ -216,26 +216,34 @@ const Home = () => {
                 Let's contact me!
               </div>
               <div className="flex justify-center">
-              <a
-                className="flex justify-center animation-img mr-3"
-                href="https://wa.me/+541166112250/"
-              >
-                <FontAwesomeIcon icon={faWhatsapp} className="icon-plane" />
-              </a>
-              <a
-                className="flex justify-center animation-img"
-                href="mailto:paupuentes919@gmail.com"
-              >
-                <FontAwesomeIcon icon={faPaperPlane} className="icon-plane" />
-              </a>
+                <a
+                  className="flex justify-center animation-img mr-3"
+                  href="https://wa.me/+541166112250/"
+                >
+                  <FontAwesomeIcon icon={faWhatsapp} className="icon-plane" />
+                </a>
+                <a
+                  className="flex justify-center animation-img"
+                  href="mailto:paupuentes919@gmail.com"
+                >
+                  <FontAwesomeIcon icon={faPaperPlane} className="icon-plane" />
+                </a>
               </div>
             </div>
             <div>
               <div className="flex justify-center fun-fact-text animation-text">
                 Fun Fact...I love cats!
               </div>
-              <p className="flex justify-center gif-text animation-img">Enjoy this API Gif about felines</p>
-              <div className="flex justify-center mb-10 animation-text"><img src={gifData.data[randomIndex].images.original.url} width="200px" height="200px"/></div>
+              <p className="flex justify-center gif-text animation-img">
+                Enjoy this API Gif about felines
+              </p>
+              <div className="flex justify-center mb-10 animation-text">
+                <img
+                  src={gifData.data[randomIndex].images.original.url}
+                  width="200px"
+                  height="200px"
+                />
+              </div>
             </div>
           </div>
         </div>
