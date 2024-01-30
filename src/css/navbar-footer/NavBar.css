@@ -3,10 +3,10 @@
 }
 
 .text-color-navbar-current {
-    text-decoration: underline;
-    text-decoration-thickness: 2px;
-    text-underline-offset: 0.5rem;
-    color: #caaf6f;
+    text-decoration: underline !important;
+    text-decoration-thickness: 2px !important;
+    text-underline-offset: 0.5rem !important;
+    color: #caaf6f !important;
     
 }
 
@@ -14,8 +14,8 @@
     color: white;
 }
 
-.text-color-navbar:hover{
-    color: #caaf6f;
+.text-color-navbar:hover, .text-color-navbar:focus{
+    color: #caaf6f !important;
 }
 
 .text-color-navbar::after {

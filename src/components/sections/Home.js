@@ -8,6 +8,7 @@ import {
   faSquareFacebook,
   faSquareInstagram,
   faLinkedin,
+  faWhatsapp,
   faSquareGithub,
 } from "@fortawesome/free-brands-svg-icons";
 import { faPaperPlane } from "@fortawesome/free-regular-svg-icons";
@@ -214,12 +215,20 @@ const Home = () => {
               <div className="flex justify-center contact-me-home animation-text">
                 Let's contact me!
               </div>
+              <div className="flex justify-center">
+              <a
+                className="flex justify-center animation-img mr-3"
+                href="https://wa.me/+541166112250/"
+              >
+                <FontAwesomeIcon icon={faPaperPlane} className="icon-plane" />
+              </a>
               <a
                 className="flex justify-center animation-img"
                 href="mailto:paupuentes919@gmail.com"
               >
-                <FontAwesomeIcon icon={faPaperPlane} className="icon-plane" />
+                <FontAwesomeIcon icon={faWhatsapp} className="icon-plane" />
               </a>
+              </div>
             </div>
             <div>
               <div className="flex justify-center fun-fact-text animation-text">

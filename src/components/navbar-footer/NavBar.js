@@ -1,25 +1,40 @@
-import React from "react"
-import { Disclosure } from '@headlessui/react'
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
-import "../../css/navbar-footer/NavBar.css"
+import React, { useEffect, useState} from "react";
+import { Link } from "react-router-dom";
+import { Disclosure } from "@headlessui/react";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import "../../css/navbar-footer/NavBar.css";
 
-const navigation = [
-    { name: 'Home', href: '#', current: true },
-    { name: 'About', href: '#', current: false },
-    { name: 'Skills', href: '#', current: false },
-    { name: 'Education', href: '#', current: false },
-    { name: 'Work', href: '#', current: false },
-    { name: 'Experience', href: '#', current: false },
-    { name: 'Contact', href: '#', current: false },
-  ]
-  
+const NavBar = ({currentPage}) => {
+
+  const navigation = [
+    { name: "Home", href: "/", current: true},
+    { name: "About", href: "/about", current: false },
+    { name: "Skills", href: "#", current: false},
+    { name: "Education", href: "#", current: false },
+    { name: "Work", href: "#", current: false },
+    { name: "Contact", href: "#", current: false },
+  ];
+
   function classNames(...classes) {
+    console.log(classes.filter(Boolean).join(' '))
     return classes.filter(Boolean).join(' ')
   }
 
-const NavBar = () => {
-    return(
-        <Disclosure as="nav" className="nav-bar-colors">
+  function clickNavBar(item) {
+    navigation.forEach((e) => {
+      document.querySelector(".text-color-navbar-current")?.classList.add("relative");
+      document.querySelector(".text-color-navbar-current")?.classList.add("text-color-navbar");
+      document.querySelector(".text-color-navbar-current")?.classList.add("hover:text-color-navbar");
+      document.querySelector(".text-color-navbar-current")?.classList.remove("text-color-navbar-current");
+      e.current = false;
+      if(item.name == e.name){
+        e.current = true;
+      }
+    })
+  }
+  console.log("navigation", navigation);
+  return (
+    <Disclosure as="nav" className="nav-bar-colors">
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -40,24 +55,27 @@ const NavBar = () => {
                 <div className="hidden sm:ml-6 sm:block">
                   <div className="flex space-x-4">
                     {navigation.map((item) => (
-                      <a
+                      <Link
                         key={item.name}
-                        href={item.href}
+                        to={item.href}
                         className={classNames(
-                          item.current ? 'text-color-navbar-current' : 'relative text-color-navbar hover:text-color-navbar',
-                          'rounded-md px-3 py-2 text-sm font-medium'
+                          item.current
+                            ? "text-color-navbar-current"
+                            : "relative text-color-navbar hover:text-color-navbar",
+                          "rounded-md px-3 py-2 text-sm font-medium"
                         )}
-                        aria-current={item.current ? 'page' : undefined}
+                        aria-current={item.current ? "page" : undefined}
+                        onClick={() => clickNavBar(item)}
                       >
                         {item.name}
-                      </a>
+                      </Link>
                     ))}
                   </div>
                 </div>
               </div>
             </div>
           </div>
-
+  
           <Disclosure.Panel className="sm:hidden">
             <div className="space-y-1 px-2 pb-3 pt-2">
               {navigation.map((item) => (
@@ -66,10 +84,12 @@ const NavBar = () => {
                   as="a"
                   href={item.href}
                   className={classNames(
-                    item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                    'block rounded-md px-3 py-2 text-base font-medium'
+                    item.current
+                      ? "bg-gray-900"
+                      : "text-gray-300 hover:bg-gray-700 hover:text-white",
+                    "block rounded-md px-3 py-2 text-base font-medium"
                   )}
-                  aria-current={item.current ? 'page' : undefined}
+                  aria-current={item.current ? "page" : undefined}
                 >
                   {item.name}
                 </Disclosure.Button>
@@ -79,6 +99,7 @@ const NavBar = () => {
         </>
       )}
     </Disclosure>
-)}
+  );
+};
 
 export default NavBar;
