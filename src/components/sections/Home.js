@@ -220,13 +220,13 @@ const Home = () => {
                 className="flex justify-center animation-img mr-3"
                 href="https://wa.me/+541166112250/"
               >
-                <FontAwesomeIcon icon={faPaperPlane} className="icon-plane" />
+                <FontAwesomeIcon icon={faWhatsapp} className="icon-plane" />
               </a>
               <a
                 className="flex justify-center animation-img"
                 href="mailto:paupuentes919@gmail.com"
               >
-                <FontAwesomeIcon icon={faWhatsapp} className="icon-plane" />
+                <FontAwesomeIcon icon={faPaperPlane} className="icon-plane" />
               </a>
               </div>
             </div>
