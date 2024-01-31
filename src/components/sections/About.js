@@ -12,19 +12,19 @@ function About() {
       </div>
       <div className="flex justify-center">
         <img src={aboutmephoto} className="img-about-me" />
-        <div className="full-stack-text">
-          Im a Full Stack Web Developer from Buenos Aires, Argentina
-        </div>
-        <div className="flex">
+      </div>
+      <div className="full-stack-text flex justify-center">
+        Im a Full Stack Web Developer from Buenos Aires, Argentina
+      </div>
+      <div className="flex comic-container">
         <div className="description-about-me">
           When I'm not coding, I'm someone who finds immense fulfillment in
           expressing my creativity through drawing and painting. Spending
-          quality time with my family, pets and friends is invaluable to me. I also
-          prioritize my physical well-being and enjoy the energizing atmosphere
-          of the gym.
+          quality time with my family, pets and friends is invaluable to me. I
+          also prioritize my physical well-being and enjoy the energizing
+          atmosphere of the gym.
         </div>
-        <img src={paulafacultad} className="img-facultad"/>
-        </div>
+        <img src={paulafacultad} className="img-facultad" />
       </div>
     </div>
   );
