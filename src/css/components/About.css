@@ -150,7 +150,7 @@
     margin-left: 8%;
     width: 527px;
     max-width: unset;
-    margin-top: 8rem;
+    margin-top: 1rem;
     margin-bottom: 1rem;
     min-height: unset;
     height: 120px;
@@ -162,8 +162,9 @@
   }
 
   .full-stack-text {
-    top: 63%;
-    left: 8%;
+    position: unset;
+    margin-left: 8%;
+    margin-top: 0rem;
   }
 }
 
@@ -236,7 +237,6 @@
   }
   .description-about-me {
     width: 230px;
-    margin-top: 11rem;
     height: unset;
   }
   .img-facultad {
