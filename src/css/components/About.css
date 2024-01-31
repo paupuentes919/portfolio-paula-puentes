@@ -1,130 +1,251 @@
-@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
 
 .img-about-me {
-    position: absolute;
-    bottom: 0;
-    left: 5%;
-    height: 400px;
+  position: absolute;
+  bottom: 0;
+  left: 5%;
+  height: 400px;
 }
 
 .img-me {
-    height: 300px;
+  height: 300px;
 }
 
 .about-me-container {
-    display: flex;
-    position: absolute;
-    top: 13%;
-    right: 19%;
+  display: flex;
+  position: absolute;
+  top: 13%;
+  right: 19%;
 }
 
 .about-me-text {
-    font-family: 'Bangers';
-    font-size: 150px;
-    display: flex;
-    justify-content: flex-end;
-    color: #ff0099;
-    -webkit-text-stroke: 3px black;
+  font-family: "Bangers";
+  font-size: 150px;
+  display: flex;
+  justify-content: flex-end;
+  color: #ff0099;
+  -webkit-text-stroke: 3px black;
 }
 
 .full-stack-text {
-    font-family: 'Bangers';
-    font-size: 40px;
-    position: absolute;
-    top: 53%;
-    right: 22.5%;
-    max-width: 40%;
-    padding-left: 1rem;
-    height: 120px;
-    border: 2px solid black;
-    background-color: white;
+  font-family: "Bangers";
+  font-size: 40px;
+  position: absolute;
+  top: 53%;
+  right: 22.5%;
+  max-width: 40%;
+  padding-left: 1rem;
+  height: 120px;
+  border: 2px solid black;
+  background-color: white;
 }
 
 .description-about-me {
-    padding-top: 0.3rem;
-    font-family: 'Bangers';
-    font-size: 18px;
-    max-width: 25%;
-    position: absolute;
-    padding-left: 1rem;
-    right: 37.5%;
-    bottom: 3%;
-    border: 2px solid black;
-    background-color: white;
-    min-height: 165px;
+  padding-top: 0.3rem;
+  font-family: "Bangers";
+  font-size: 18px;
+  max-width: 25%;
+  position: absolute;
+  padding-left: 1rem;
+  right: 37.5%;
+  bottom: 3%;
+  border: 2px solid black;
+  background-color: white;
+  min-height: 165px;
 }
 
 .img-facultad {
-    position: absolute;
-    bottom: 3%;
-    height: 171px;
-    padding: 0.5rem;
-    border: 2px solid black;
-    background-color: white;
-    right: 22.5%;
-    width: 200px;
+  position: absolute;
+  bottom: 3%;
+  height: 171px;
+  padding: 0.5rem;
+  border: 2px solid black;
+  background-color: white;
+  right: 22.5%;
+  width: 200px;
 }
 
 .comic-container {
-    justify-content: unset;
+  justify-content: unset;
 }
 
-@media(max-width: 1465px) {
-    .full-stack-text {
-        font-size: 35px;
-    }  
-    .description-about-me {
-        font-size: 15px;
-        max-width: 24%;
-        right: 38.5%;
-    }
-    .img-facultad {
-        height: 165px;
-    }
+@media (max-width: 1465px) {
+  .full-stack-text {
+    font-size: 35px;
+  }
+  .description-about-me {
+    font-size: 15px;
+    max-width: 24%;
+    right: 38.5%;
+  }
+  .img-facultad {
+    height: 165px;
+  }
 }
 
-@media (max-width:1360px){
-    .img-about-me {
-        height: 300px;
-        position: unset;
-        margin-right: 15rem;
-        margin-top: -7rem;
-    }
-    .about-me-container {
-        display: flex;
-        position: unset;
-        justify-content: center;
-    }
-    .comic-container {
-        justify-content: center;
-    }
-    .full-stack-text {
-        margin-top: 1.5rem;
-        margin-left: 0;
-        width: 34rem;
-        max-width: unset;
-    }
-    .description-about-me {
-        right: 51%;
-        bottom: 2%;
-        max-width: unset;
-        width: 20.4rem;
-    }
-    
-    .img-facultad {
-        bottom: 2%;
-        left: 50.3%;
-        right: unset;
-    }
-    .about-me-text {
-        font-size: 100px;
-    }
-    .img-me {
-        margin-top: 2rem;
-        height: 200px;
-    }
+@media (max-width: 1360px) {
+  .img-about-me {
+    height: 300px;
+    position: unset;
+    margin-right: 15rem;
+    margin-top: -7rem;
+  }
+  .about-me-container {
+    display: flex;
+    position: unset;
+    justify-content: center;
+  }
+  .comic-container {
+    justify-content: center;
+  }
+  .full-stack-text {
+    margin-top: 1.5rem;
+    margin-left: 0;
+    width: 34rem;
+    max-width: unset;
+  }
+  .description-about-me {
+    right: 51%;
+    bottom: 2%;
+    max-width: unset;
+    width: 20.4rem;
+  }
+
+  .img-facultad {
+    bottom: 2%;
+    left: 50.3%;
+    right: unset;
+  }
+  .about-me-text {
+    font-size: 100px;
+  }
+  .img-me {
+    margin-top: 2rem;
+    height: 200px;
+  }
 }
 
 @media (max-width: 757px) {
-    
+  .full-stack-text {
+    font-size: 27px;
+    left: 5%;
+    width: 527px;
+  }
+  .description-about-me {
+    left: 5%;
+    width: 319px;
+  }
+
+  .img-facultad {
+    left: 50%;
+  }
+}
+
+@media (max-width: 720px) {
+  .comic-container {
+    display: block;
+  }
+  .description-about-me {
+    position: unset;
+    margin-left: 8%;
+    width: 527px;
+    max-width: unset;
+    margin-top: 8rem;
+    margin-bottom: 1rem;
+    min-height: unset;
+    height: 120px;
+  }
+
+  .img-facultad {
+    position: unset;
+    margin-left: 28%;
+  }
+
+  .full-stack-text {
+    top: 63%;
+    left: 8%;
+  }
+}
+
+@media (max-width: 607px) {
+  .img-about-me {
+    margin-top: -5rem;
+    height: 250px;
+  }
+  .about-me-text {
+    font-size: 80px;
+  }
+  .img-me {
+    height: 150px;
+  }
+  .full-stack-text {
+    top: 54%;
+    width: 450px;
+  }
+  .description-about-me {
+    width: 450px;
+  }
+}
+
+@media (max-width: 550px) {
+  .img-about-me {
+    margin-right: 5rem;
+  }
+}
+
+@media (max-width: 514px) {
+  .full-stack-text {
+    width: 350px;
+  }
+  .description-about-me {
+    width: 350px;
+  }
+  .img-facultad {
+    margin-left: 20%;
+  }
+}
+
+@media (max-width: 400px) {
+  .full-stack-text {
+    width: 250px;
+  }
+  .description-about-me {
+    width: 250px;
+    height: unset;
+  }
+  .img-facultad {
+    margin-left: 8%;
+    width: 250px;
+  }
+}
+
+@media (max-width: 362px) {
+  .about-me-text {
+    font-size: 60px;
+  }
+  .img-me {
+    height: 120px;
+  }
+  .img-about-me {
+    height: 220px;
+  }
+  .full-stack-text {
+    width: 230px;
+    height: unset;
+    top: 45%;
+  }
+  .description-about-me {
+    width: 230px;
+    margin-top: 11rem;
+    height: unset;
+  }
+  .img-facultad {
+    width: 230px;
+  }
+}
+
+@media (max-width: 326px) {
+  .img-about-me {
+    margin-left: 2.5rem;
+  }
 }
